@@ -46,7 +46,7 @@ Pod::Spec.new do |s|
 
 #s.public_header_files = 'swiftFrameworkTrial.h'
   s.source       = { :git => "https://github.com/Padma23/framworkPod.git", :commit => "ca3eef1031c4e377c3de0f1cca4827a516c87f1d" }
-  s.source_files = 'swiftFrameworkTrial/swiftFrameworkTrial.h'
+#s.source_files = 'swiftFrameworkTrial/**'
   s.dependency 'Protobuf'
 
 end
