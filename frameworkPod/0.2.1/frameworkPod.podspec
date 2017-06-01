@@ -44,12 +44,15 @@ Pod::Spec.new do |s|
   s.frameworks = 'UIKit'
   s.module_name = 'frameworkPod'
 s.requires_arc = false
-#  s.pod_target_xcconfig = {
-#'GCC_PREPROCESSOR_DEFINITIONS[config=Debug]' => 'GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1',
+#s.pod_target_xcconfig = {
+#     'GCC_PREPROCESSOR_DEFINITIONS[config=Debug]' => 'GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1',
 #  }
+s.xcconfig = {
+"GCC_PREPROCESSOR_DEFINITIONS" => '$(inherited) GPB_USE_PROTOBUF_FRAMEWORK_IMPORTS=1'
+}
 
 #s.source       = { :git => "https://github.com/Padma23/framworkPod.git", :commit => "d38a78b640aae87b88c92c055fcc6c47feff1a7e" }
-  s.source_files = 'swiftFrameworkTrial/swiftFrameworkTrial.h','swiftFrameworkTrial/objcProto/*.h','swiftFrameworkTrial/objcProto/share/*.h'
+  s.source_files = 'swiftFrameworkTrial/swiftFrameworkTrial.h','swiftFrameworkTrial/objcProto/*.h','swiftFrameworkTrial/objcProto/share/*.h','swiftFrameworkTrial/objcProto/share/*.m','swiftFrameworkTrial/objcProto/*.m'
   s.dependency 'Protobuf'
 
 end
